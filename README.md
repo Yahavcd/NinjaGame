@@ -1,1 +1,1 @@
-# NinjaGame
+# Ninja-game
