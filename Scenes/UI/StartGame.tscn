@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://src/EndGame.gd" type="Script" id=2]
+[ext_resource path="res://src/StartGame.gd" type="Script" id=1]
 
-[node name="EmdGame" type="Node"]
-script = ExtResource( 2 )
+[node name="StartGame" type="Node"]
+script = ExtResource( 1 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -49,6 +49,7 @@ text = "Play
 align = 1
 
 [node name="Options" type="Label" parent="Control/VBoxContainer"]
+visible = false
 margin_top = 155.0
 margin_right = 224.0
 margin_bottom = 186.0
@@ -58,12 +59,47 @@ text = "Options
 align = 1
 
 [node name="Exit" type="Label" parent="Control/VBoxContainer"]
-margin_top = 190.0
+margin_top = 155.0
 margin_right = 224.0
-margin_bottom = 204.0
+margin_bottom = 169.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Exit"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Background" type="ColorRect" parent="."]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 256.0
+margin_bottom = 352.0
+color = Color( 0.0901961, 0.262745, 0, 0.627451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 95.3264
+margin_top = 186.818
+margin_right = 107.326
+margin_bottom = 206.818
+rect_scale = Vector2( 2.8, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 96.2173
+margin_top = 115.545
+margin_right = 108.217
+margin_bottom = 135.545
+rect_scale = Vector2( 2.8, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -8,6 +8,7 @@ var is_moving = false
 var percent_moved_to_next_tile = 0.0
 
 signal moving
+signal stop_moving
 
 func _ready():
 	initial_position = position
@@ -45,6 +46,7 @@ func move(delta):
 		position = initial_position + (gamestate.TILE_SIZE * input_direction)
 		percent_moved_to_next_tile = 0
 		is_moving = false
+		emit_signal("stop_moving")
 		points_up()
 	else:
 		position = initial_position + (gamestate.TILE_SIZE * input_direction * percent_moved_to_next_tile)

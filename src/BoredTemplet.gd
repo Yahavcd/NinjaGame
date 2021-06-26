@@ -86,3 +86,8 @@ func rotate_bullet():
 	if spawn_side == BOTTOM:
 		current_position.rotation = deg2rad(360)
 		signal_rotation = 0
+
+func _on_PlayerTemplate_stop_moving():
+	$box.hide()
+	$box.position = $PlayerTemplate.position
+	$box.show()

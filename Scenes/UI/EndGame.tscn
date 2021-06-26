@@ -55,6 +55,16 @@ position = Vector2( 150.014, 5.27148 )
 scale = Vector2( 0.14352, 0.149132 )
 texture = ExtResource( 2 )
 
+[node name="Background" type="ColorRect" parent="Control/VBoxContainer/Replay/Sprite"]
+margin_left = -1268.0
+margin_top = -1450.0
+margin_right = 690.0
+margin_bottom = 1048.0
+color = Color( 0.0901961, 0.262745, 0, 0.627451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="Control/VBoxContainer/Replay/Sprite"]
 self_modulate = Color( 1, 1, 1, 0 )
 show_behind_parent = true
