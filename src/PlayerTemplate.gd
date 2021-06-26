@@ -53,7 +53,7 @@ func _on_PlayerTemplate_area_entered(_area):
 	gamestate.is_hit = true
 	gamestate.lives -= 1
 	if gamestate.lives == 0:
-		get_tree().change_scene("res://Scenes/UI/EmdGame.tscn")
+		get_tree().change_scene("res://Scenes/UI/EndGame.tscn")
 
 func points_up():
 	if gamestate.is_hit != true:

@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/return.png" type="Texture" id=2]
+
+[node name="EndGame" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_right = 224.0
+margin_bottom = 320.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Label" parent="Control/VBoxContainer"]
+margin_top = 126.0
+margin_right = 224.0
+margin_bottom = 157.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "GAME OVER
+"
+align = 1
+
+[node name="Score" type="Label" parent="Control/VBoxContainer"]
+margin_top = 161.0
+margin_right = 224.0
+margin_bottom = 175.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Your Score: 0"
+align = 1
+
+[node name="Replay" type="Label" parent="Control/VBoxContainer"]
+margin_top = 179.0
+margin_right = 224.0
+margin_bottom = 193.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Play Again?  "
+align = 1
+
+[node name="Sprite" type="Sprite" parent="Control/VBoxContainer/Replay"]
+position = Vector2( 150.014, 5.27148 )
+scale = Vector2( 0.14352, 0.149132 )
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="Control/VBoxContainer/Replay/Sprite"]
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = -45.6637
+margin_top = -31.056
+margin_right = 49.3363
+margin_bottom = 39.944
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/VBoxContainer/Replay/Sprite/Button" to="." method="_on_Button_pressed"]

@@ -4,7 +4,7 @@ var points
 
 func _ready():
 	points = gamestate.points
-	$Control/VBoxContainer/Label3.text = "Your Score: " + String(points)
+	$Control/VBoxContainer/Score.text = "Your Score: " + String(points)
 
 func _on_Button_pressed():
 	gamestate.points = 0
