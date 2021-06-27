@@ -82,9 +82,9 @@ __meta__ = {
 [node name="Button2" type="Button" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 95.3264
-margin_top = 186.818
+margin_top = 150.291
 margin_right = 107.326
-margin_bottom = 206.818
+margin_bottom = 170.291
 rect_scale = Vector2( 2.8, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

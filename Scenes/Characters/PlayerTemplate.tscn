@@ -52,7 +52,7 @@ walk_speed = 5.0
 position = Vector2( -3.5, -3.5 )
 scale = Vector2( 1.2, 1.2 )
 frames = SubResource( 1 )
-frame = 5
+frame = 10
 playing = true
 centered = false
 
